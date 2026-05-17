@@ -1,0 +1,339 @@
+/* Container */
+
+.mybookings-container {
+
+  padding: 30px;
+
+  background: #f4f6f8;
+
+  min-height: 100vh;
+
+}
+
+
+/* Title */
+
+.page-title {
+
+  font-size: 28px;
+
+  font-weight: 600;
+
+  margin-bottom: 20px;
+
+}
+
+
+/* Tabs */
+
+.tabs {
+
+  display: flex;
+
+  gap: 12px;
+
+  margin-bottom: 25px;
+
+}
+
+.tab {
+
+  padding: 10px 20px;
+
+  border: none;
+
+  background: #e0e0e0;
+
+  cursor: pointer;
+
+  border-radius: 8px;
+
+  font-weight: 500;
+
+  transition: 0.2s;
+
+}
+
+.tab:hover {
+
+  background: #cfd8dc;
+
+}
+
+.tab.active {
+
+  background: #1976D2;
+
+  color: white;
+
+}
+
+
+/* Booking Card */
+
+.booking-card {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  background: white;
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  margin-bottom: 18px;
+
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+
+  transition: 0.2s;
+
+}
+
+.booking-card:hover {
+
+  transform: translateY(-2px);
+
+}
+
+
+/* Left Section */
+
+.booking-left {
+
+  flex: 2;
+
+}
+
+
+/* Route */
+
+.route {
+
+  font-size: 20px;
+
+  font-weight: 600;
+
+  margin-bottom: 8px;
+
+}
+
+.arrow {
+
+  margin: 0 8px;
+
+  color: #1976D2;
+
+}
+
+
+/* Bus */
+
+.bus {
+
+  margin-bottom: 6px;
+
+  color: #555;
+
+}
+
+
+/* Seats */
+
+.seats {
+
+  margin-bottom: 6px;
+
+}
+
+.seat-badge {
+
+  background: #1976D2;
+
+  color: white;
+
+  padding: 5px 12px;
+
+  border-radius: 20px;
+
+  margin-left: 6px;
+
+  font-size: 14px;
+
+}
+
+
+/* Booking Time */
+
+.booking-time {
+
+  color: #777;
+
+  font-size: 14px;
+
+}
+
+
+/* Right Section */
+
+.booking-right {
+
+  flex: 1;
+
+  text-align: right;
+
+}
+
+
+/* Status Badge */
+
+.status {
+
+  display: inline-block;
+
+  padding: 4px 12px;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  margin-bottom: 10px;
+
+}
+
+.status.CONFIRMED {
+
+  background: #e8f5e9;
+
+  color: #2e7d32;
+
+}
+
+.status.CANCELLED {
+
+  background: #ffebee;
+
+  color: #c62828;
+
+}
+
+
+/* Amount */
+
+.amount {
+
+  font-size: 20px;
+
+  font-weight: bold;
+
+  margin-bottom: 10px;
+
+}
+
+
+/* Buttons */
+
+.view-btn {
+
+  padding: 8px 16px;
+
+  background: #1976D2;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  margin-right: 8px;
+
+  transition: 0.2s;
+
+}
+
+.view-btn:hover {
+
+  background: #0d47a1;
+
+}
+
+
+.cancel-btn {
+
+  padding: 8px 16px;
+
+  background: #d32f2f;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+}
+
+.cancel-btn:hover {
+
+  background: #8e0000;
+
+}
+
+
+/* Empty State */
+
+.no-bookings {
+
+  text-align: center;
+
+  font-size: 18px;
+
+  color: #777;
+
+}
+
+
+/* Loading */
+
+.loading {
+
+  padding: 40px;
+
+  text-align: center;
+
+  font-size: 18px;
+
+}
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+  .booking-card {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+  }
+
+  .booking-right {
+
+    text-align: left;
+
+    margin-top: 10px;
+
+  }
+
+}

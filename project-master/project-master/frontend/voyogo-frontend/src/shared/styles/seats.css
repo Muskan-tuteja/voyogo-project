@@ -1,0 +1,571 @@
+/* =========================
+   MAIN CONTAINER LAYOUT
+========================= */
+
+.seat-container {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  background: #f5f6fa;
+  min-height: 100vh;
+}
+
+.seat-left {
+  flex: 2;
+}
+
+.seat-right {
+  flex: 1;
+}
+
+
+/* =========================
+   BUS LAYOUT CONTAINER
+========================= */
+
+.bus-layout {
+  display: flex;
+  gap: 40px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+}
+
+
+/* =========================
+   DECK (LOWER / UPPER)
+========================= */
+
+.deck {
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.deck-title {
+  font-weight: 600;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* =========================
+   SEAT GRID (REAL BUS STYLE)
+========================= */
+
+.deck-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 60px);
+  gap: 18px 30px;
+}
+
+
+/* =========================
+   SEAT WRAPPER
+========================= */
+
+.seat-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* =========================
+   SEAT BASE STYLE
+========================= */
+
+.seat {
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 6px;
+
+  border: 2px solid #4CAF50;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+
+}
+
+
+/* =========================
+   SLEEPER SEAT (VERTICAL)
+========================= */
+
+.seat.sleeper {
+
+  width: 40px;
+  height: 70px;
+
+}
+
+
+/* =========================
+   AVAILABLE SEAT
+========================= */
+
+.seat.available {
+
+  background: #E8F5E9;
+  border-color: #4CAF50;
+  color: #2e7d32;
+
+}
+
+.seat.available:hover {
+
+  transform: scale(1.08);
+
+}
+
+
+/* =========================
+   BOOKED SEAT
+========================= */
+
+.seat.booked {
+
+  background: #FFEBEE;
+  border-color: #E53935;
+  color: #c62828;
+
+  cursor: not-allowed;
+
+}
+
+
+/* =========================
+   SELECTED SEAT
+========================= */
+
+.seat.selected {
+
+  background: #4CAF50;
+  color: white;
+
+  border-color: #2e7d32;
+
+  transform: scale(1.12);
+
+  box-shadow: 0 0 8px rgba(76,175,80,0.6);
+
+}
+
+
+/* =========================
+   SEAT PRICE LABEL
+========================= */
+
+.seat-price {
+
+  font-size: 12px;
+  margin-top: 5px;
+  font-weight: 500;
+
+  color: #555;
+
+}
+
+
+/* =========================
+   FARE SUMMARY CARD
+========================= */
+
+.fare-card {
+
+  border: 1px solid #ddd;
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  background: white;
+
+  position: sticky;
+  top: 20px;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+}
+
+.seat-item {
+
+  display: flex;
+  justify-content: space-between;
+
+  margin: 6px 0;
+
+  font-size: 14px;
+
+}
+
+.fare-total {
+
+  font-size: 20px;
+  font-weight: bold;
+
+  margin-top: 12px;
+
+  color: #2e7d32;
+
+}
+
+
+/* =========================
+   BOOKING BUTTON
+========================= */
+
+.booking-btn {
+
+  width: 100%;
+
+  padding: 12px;
+
+  margin-top: 15px;
+
+  background: #d32f2f;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 8px;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+}
+
+.booking-btn:hover {
+
+  background: #b71c1c;
+
+}
+
+
+/* =========================
+   STEERING WHEEL ANIMATION
+========================= */
+
+.steering-wheel {
+
+  width: 22px;
+  height: 22px;
+
+  border: 3px solid #333;
+
+  border-radius: 50%;
+
+  animation: rotateWheel 2s linear infinite;
+
+}
+
+@keyframes rotateWheel {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+.bus-layout-horizontal {
+
+  display: flex;
+
+  gap: 50px;
+
+  background: white;
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  border: 1px solid #ddd;
+
+}
+
+
+.deck-column {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+}
+
+
+.deck-vertical {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+
+}
+
+
+.bus-aisle {
+
+  width: 60px;
+
+}
+
+
+.seat {
+
+  width: 45px;
+
+  height: 65px;
+
+  border-radius: 8px;
+
+  border: 2px solid #4CAF50;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+}
+.bus-layout-horizontal {
+
+  display: flex;
+
+  gap: 50px;
+
+  background: white;
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  border: 1px solid #ddd;
+
+}
+
+
+.deck-column {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+}
+
+
+.deck-vertical {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+
+}
+
+
+.bus-aisle {
+
+  width: 60px;
+
+}
+
+
+.seat {
+
+  width: 45px;
+
+  height: 65px;
+
+  border-radius: 8px;
+
+  border: 2px solid #4CAF50;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+}
+.bus-layout-horizontal {
+
+  display: flex;
+
+  gap: 60px;
+
+  background: white;
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+}
+
+
+.deck-column {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+}
+
+
+.deck-grid-2x2 {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 60px);
+
+  gap: 15px;
+
+}
+
+
+.bus-aisle {
+
+  width: 50px;
+
+}
+
+
+.seat {
+
+  width: 55px;
+
+  height: 55px;
+
+  border-radius: 8px;
+
+  border: 2px solid #4CAF50;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+}
+
+
+.seat.available {
+
+  background: #E8F5E9;
+
+}
+
+.seat.booked {
+
+  background: #FFEBEE;
+
+  border-color: red;
+
+  cursor: not-allowed;
+
+}
+
+.seat.selected {
+
+  background: #4CAF50;
+
+  color: white;
+
+}
+.seat-wrapper {
+  position: relative;
+}
+
+.seat-tooltip {
+
+  position: absolute;
+
+  bottom: 65px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  background: black;
+
+  color: white;
+
+  padding: 6px 10px;
+
+  border-radius: 6px;
+
+  font-size: 12px;
+
+  white-space: nowrap;
+
+  z-index: 100;
+  /* LOCKED SEAT - GREY */
+
+.seat.locked {
+
+  background: #E0E0E0;
+
+  border-color: #9E9E9E;
+
+  color: #616161;
+
+  cursor: not-allowed;
+
+}
+
+
+}
+
+/* LOCKED SEAT - GREY */
+
+.seat.locked {
+
+  background: #E0E0E0;
+
+  border-color: #9E9E9E;
+
+  color: #616161;
+
+  cursor: not-allowed;
+
+}

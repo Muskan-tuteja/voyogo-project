@@ -1,0 +1,285 @@
+Phase 1 — Critical Post-Booking Features (Must implement next)
+
+These are essential for a complete booking lifecycle.
+
+1. View My Bookings (Booking History)
+
+Users must see all past and upcoming bookings.
+
+Frontend
+
+/my-bookings
+
+
+Backend
+
+GET /bookings/user/{userId}
+
+
+Shows
+
+Booking ID
+
+Route
+
+Date
+
+Seats
+
+Status
+
+Download Ticket
+
+2. Cancel Booking
+
+Users must cancel and free seats.
+
+Backend flow
+
+Cancel Booking
+→ update booking status CANCELLED
+→ update payment status REFUND_PENDING
+→ release seats
+
+
+API:
+
+PUT /booking/cancel/{bookingId}
+
+
+Database update:
+
+booking.status = CANCELLED
+
+3. Refund Handling
+
+Refund to original payment method.
+
+Add to Payment entity:
+
+private PaymentStatus refundStatus;
+private LocalDateTime refundTime;
+
+
+Statuses:
+
+SUCCESS
+FAILED
+REFUND_PENDING
+REFUNDED
+
+4. Seat availability real-time sync
+
+Prevent stale UI.
+
+Frontend polling:
+
+GET /buses/seats/trip/{tripId}
+
+
+or
+
+WebSocket (better).
+
+5. Booking Status Page
+/booking/{bookingId}
+
+
+Shows full details.
+
+Phase 2 — Business-Critical Features (Real production apps)
+
+These make your system industry-ready.
+
+6. User Authentication & Authorization (Spring Security + JWT)
+
+Secure endpoints:
+
+POST /auth/login
+POST /auth/register
+
+
+Protect:
+
+/booking/create
+/my-bookings
+
+7. Admin Panel
+
+Admin can manage:
+
+buses
+
+routes
+
+trips
+
+pricing
+
+Endpoints:
+
+POST /admin/bus
+POST /admin/trip
+PUT /admin/trip
+
+8. Dynamic Fare Pricing
+
+Fare varies by:
+
+date
+
+demand
+
+seat type
+
+Add:
+
+private double dynamicFare;
+
+9. Email Enhancements
+
+Send:
+
+ticket
+
+cancellation confirmation
+
+refund confirmation
+
+10. Ticket QR validation
+
+Scanner verifies booking.
+
+GET /booking/verify/{bookingId}
+
+Phase 3 — Real-Time & Scalability Features
+
+These make it enterprise-grade.
+
+11. WebSocket Seat Lock Sync
+
+Instant update when someone locks seat.
+
+Tech:
+
+Spring WebSocket
+STOMP
+
+12. Redis for Seat Locking
+
+Replace DB locks with Redis.
+
+Faster and scalable.
+
+13. Payment Gateway Integration
+
+Integrate:
+
+Razorpay
+
+Stripe
+
+PhonePe
+
+Flow:
+
+Create order
+Verify signature
+Confirm booking
+
+14. Booking Expiration Protection
+
+If payment fails:
+
+Auto unlock seats
+
+
+Already partially implemented.
+
+Phase 4 — User Experience Features
+
+These improve product quality.
+
+15. Download Ticket Anytime
+GET /booking/{id}/pdf
+
+16. Resend Ticket Email
+POST /booking/{id}/resend
+
+17. Passenger Profile
+
+Save frequent passenger info.
+
+18. Search Filters
+
+Add filters:
+
+AC / NON-AC
+
+Sleeper / Seater
+
+Price range
+
+Phase 5 — Production Deployment Features
+
+Required for real-world deployment.
+
+19. Logging
+
+Add logging:
+
+log.info("Booking created {}", bookingId);
+
+
+Use:
+
+SLF4J + Logback
+
+20. Exception handling
+
+Global handler:
+
+@ControllerAdvice
+
+21. Docker deployment
+
+Containerize:
+
+Spring Boot
+PostgreSQL
+React
+
+22. AWS Deployment
+
+Deploy to:
+
+EC2
+RDS
+S3
+
+Phase 6 — Advanced Enterprise Features (Top companies)
+
+Optional but high-value.
+
+23. Notification System
+
+Email + SMS + Push.
+
+24. Analytics Dashboard
+
+Track:
+
+bookings per day
+
+revenue
+
+occupancy
+
+25. Microservices architecture
+
+Split into:
+
+User Service
+Booking Service
+Payment Service
+Notification Service

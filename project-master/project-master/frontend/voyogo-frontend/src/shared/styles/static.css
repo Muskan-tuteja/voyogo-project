@@ -1,0 +1,46 @@
+.static-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.static-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.static-text {
+  margin-bottom: 20px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.static-list {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.static-list li {
+  margin-bottom: 8px;
+}
+
+/* FAQ */
+
+.faq-container {
+  margin-top: 20px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.faq-question {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.faq-answer {
+  margin-top: 8px;
+  color: #555;
+}

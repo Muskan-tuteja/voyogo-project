@@ -1,0 +1,109 @@
+/* Container */
+
+.splash-container {
+
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #1e293b
+  );
+
+}
+
+
+/* Logo animation */
+
+.splash-logo {
+
+  width: 180px;
+
+  animation:
+
+    logoZoom 1.5s ease,
+    logoFloat 2s infinite ease-in-out;
+
+}
+
+
+/* Text */
+
+.splash-text {
+
+  margin-top: 15px;
+
+  font-size: 32px;
+
+  color: #ff4d4f;
+
+  letter-spacing: 4px;
+
+  animation: fadeIn 2s;
+
+}
+
+
+/* Zoom effect */
+
+@keyframes logoZoom {
+
+  from {
+
+    transform: scale(0.5);
+    opacity: 0;
+
+  }
+
+  to {
+
+    transform: scale(1);
+    opacity: 1;
+
+  }
+
+}
+
+
+/* Floating effect */
+
+@keyframes logoFloat {
+
+  0%,100% {
+
+    transform: translateY(0);
+
+  }
+
+  50% {
+
+    transform: translateY(-10px);
+
+  }
+
+}
+
+
+/* Text fade */
+
+@keyframes fadeIn {
+
+  from {
+
+    opacity: 0;
+
+  }
+
+  to {
+
+    opacity: 1;
+
+  }
+
+}

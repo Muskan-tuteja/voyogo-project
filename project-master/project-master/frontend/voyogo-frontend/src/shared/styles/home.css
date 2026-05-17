@@ -1,0 +1,206 @@
+/* Container */
+
+.home-container {
+
+  height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+
+}
+
+/* Overlay */
+
+.home-overlay {
+
+  height: 100%;
+
+  background: rgba(0,0,0,0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* Content */
+
+.home-content {
+
+  text-align: center;
+
+  color: white;
+
+}
+
+/* Title */
+
+.home-title {
+
+  font-size: 42px;
+
+  font-weight: bold;
+
+  margin-bottom: 10px;
+
+}
+
+/* Subtitle */
+
+.home-subtitle {
+
+  font-size: 18px;
+
+  margin-bottom: 30px;
+
+}
+
+/* Search form */
+
+.search-form {
+
+  display: flex;
+
+  gap: 15px;
+
+  background: rgba(255,255,255,0.1);
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  backdrop-filter: blur(12px);
+
+}
+
+/* Group */
+
+.search-group {
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+.search-group label {
+
+  font-size: 12px;
+
+  margin-bottom: 5px;
+
+}
+
+.search-group input {
+
+  padding: 10px;
+
+  border-radius: 6px;
+
+  border: none;
+
+  outline: none;
+
+}
+
+/* Button */
+
+.search-button {
+
+  background: linear-gradient(
+    135deg,
+    #e63946,
+    #c1121f
+  );
+
+  color: white;
+
+  border: none;
+
+  padding: 10px 20px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+}
+
+.search-button:hover {
+
+  transform: scale(1.05);
+
+}
+
+.suggestion-box {
+  border: 1px solid #ccc;
+  background: rgb(88, 164, 171);
+  position: absolute;
+  width: 100%;
+  z-index: 1000;
+}
+
+.suggestion-item {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: rgb(88, 164, 171);;
+}
+.autocomplete-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.suggestion-dropdown {
+
+  position: absolute;
+
+  top: 100%;
+  left: 0;
+  right: 0;
+
+  background: linear-gradient(
+    135deg,
+    #e63946,
+    #c1121f
+  );
+
+  border: 1px solid #ddd;
+
+  border-top: none;
+
+  max-height: 200px;
+
+  overflow-y: auto;
+
+  z-index: 9999;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+  border-radius: 0 0 8px 8px;
+
+}
+
+.suggestion-item {
+
+  padding: 12px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+  color: black;
+
+}
+
+.suggestion-item:hover {
+
+  background-color: #ffffff;
+
+}
+

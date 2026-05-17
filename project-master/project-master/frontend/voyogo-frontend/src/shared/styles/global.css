@@ -1,0 +1,11 @@
+@import "./variables.css";
+
+body {
+
+  margin: 0;
+  font-family: system-ui;
+
+  background: var(--background);
+  color: var(--text);
+
+}

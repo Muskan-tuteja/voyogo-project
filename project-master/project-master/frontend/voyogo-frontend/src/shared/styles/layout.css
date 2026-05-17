@@ -1,0 +1,22 @@
+.navbar {
+
+  height: 60px;
+  background: var(--primary);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 30px;
+
+}
+
+.sidebar {
+
+  width: 240px;
+  height: 100vh;
+  background: white;
+  border-right: 1px solid var(--border);
+
+}

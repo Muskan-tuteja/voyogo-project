@@ -1,0 +1,152 @@
+.admin-bookings {
+  padding: 20px;
+}
+
+.admin-bookings .admin-bookings-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.admin-bookings .admin-bookings-label {
+  font-weight: 600;
+}
+
+.admin-bookings .filter-input,
+.admin-bookings .date-input {
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+.admin-bookings .filter-input {
+  min-width: 250px;
+}
+
+.admin-bookings button {
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.admin-bookings button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.admin-bookings .admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-bookings .admin-table th,
+.admin-bookings .admin-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.admin-bookings .admin-table th {
+  background: #d84e55;
+  color: #fff;
+}
+
+.admin-bookings .view-btn {
+  background: #2563eb;
+  color: #fff;
+}
+
+.admin-bookings .cancel-btn {
+  background: #dc2626;
+  color: #fff;
+}
+
+.admin-bookings .pagination {
+  margin-top: 20px;
+}
+
+.admin-bookings .pagination button {
+  margin: 5px;
+  padding: 5px 10px;
+}
+
+.admin-bookings .active-page {
+  background: #d84e55;
+  color: #fff;
+}
+
+.admin-bookings .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-bookings .modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: min(500px, 95vw);
+}
+
+.admin-bookings .seat {
+  background: #16a34a;
+  color: #fff;
+  padding: 5px;
+  margin: 5px;
+  display: inline-block;
+}
+
+.admin-bookings .close-btn {
+  margin-top: 15px;
+}
+
+.admin-bookings .status-cell {
+  padding: 14px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.admin-bookings .error-text {
+  margin-top: 12px;
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.admin-bookings .toast {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  min-width: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: #fff;
+  z-index: 1100;
+}
+
+.admin-bookings .toast button {
+  background: transparent;
+  color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 2px 8px;
+}
+
+.admin-bookings .toast-success {
+  background: #16a34a;
+}
+
+.admin-bookings .toast-error {
+  background: #dc2626;
+}

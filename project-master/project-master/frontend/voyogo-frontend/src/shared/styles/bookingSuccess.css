@@ -1,0 +1,294 @@
+.success-container {
+
+  padding: 40px 20px;
+
+  text-align: center;
+
+  background: #f4f6f8;
+
+  min-height: 100vh;
+
+}
+
+
+.success-title {
+
+  color: #2e7d32;
+
+  margin-bottom: 25px;
+
+  font-size: 28px;
+
+  font-weight: 600;
+
+}
+
+
+/* TICKET CARD */
+
+.ticket {
+
+  width: 520px;
+
+  margin: auto;
+
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 12px;
+
+  border: 1px solid #e0e0e0;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+
+  position: relative;
+
+}
+
+
+/* Perforated edges effect */
+
+.ticket::before,
+.ticket::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 20px;
+
+  height: 20px;
+
+  background: #f4f6f8;
+
+  border-radius: 50%;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+}
+
+.ticket::before {
+
+  left: -10px;
+
+}
+
+.ticket::after {
+
+  right: -10px;
+
+}
+
+
+/* HEADER */
+
+.ticket-header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  border-bottom: 1px dashed #ccc;
+
+  padding-bottom: 15px;
+
+}
+
+
+/* SECTION */
+
+.ticket-section {
+
+  margin-top: 20px;
+
+  text-align: left;
+
+}
+
+
+/* ROUTE */
+
+.route {
+
+  font-size: 22px;
+
+  font-weight: 600;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+}
+
+.arrow {
+
+  font-size: 24px;
+
+  color: #1976D2;
+
+}
+
+
+/* SEATS */
+
+.seat-list {
+
+  display: flex;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+
+  margin-top: 10px;
+
+}
+
+.seat-badge {
+
+  background: #1976D2;
+
+  color: white;
+
+  padding: 6px 14px;
+
+  border-radius: 20px;
+
+  font-size: 14px;
+
+}
+
+
+/* PASSENGERS */
+
+.passenger-row {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 8px 0;
+
+  border-bottom: 1px solid #f0f0f0;
+
+  font-size: 15px;
+
+}
+
+
+/* STATUS */
+
+.status {
+
+  color: #2e7d32;
+
+  font-weight: 600;
+
+}
+
+
+/* TOTAL */
+
+.ticket-total {
+
+  margin-top: 25px;
+
+  font-size: 22px;
+
+  font-weight: bold;
+
+  color: #212121;
+
+  border-top: 1px dashed #ccc;
+
+  padding-top: 15px;
+
+}
+
+
+/* BUTTONS */
+
+.button-group {
+
+  margin-top: 30px;
+
+}
+
+
+/* Download button */
+
+.download-btn {
+
+  padding: 12px 24px;
+
+  background: #1976D2;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 8px;
+
+  margin-right: 10px;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  transition: 0.2s;
+
+}
+
+.download-btn:hover {
+
+  background: #0d47a1;
+
+}
+
+
+/* Home button */
+
+.home-btn {
+
+  padding: 12px 24px;
+
+  background: #2e7d32;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  transition: 0.2s;
+
+}
+
+.home-btn:hover {
+
+  background: #1b5e20;
+
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+
+  .ticket {
+
+    width: 100%;
+
+  }
+
+}

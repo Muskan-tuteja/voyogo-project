@@ -1,0 +1,40 @@
+﻿# Root ignores for monorepo (backend + frontend)
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.iml
+
+# Logs
+*.log
+logs/
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Node / Vite
+**/node_modules/
+**/dist/
+**/dist-ssr/
+**/.vite/
+
+# Java / Maven / Spring
+**/target/
+**/build/
+**/.mvn/wrapper/maven-wrapper.jar
+
+# Coverage / reports
+**/coverage/
+**/surefire-reports/
+
+# Runtime temp files
+*.tmp
+*.swp
+
+# Keep wrappers and source
+!**/mvnw
+!**/mvnw.cmd

@@ -1,0 +1,28 @@
+.timeline {
+
+  border-left: 3px solid var(--primary);
+
+  margin-left: 20px;
+  padding-left: 20px;
+
+}
+
+.timeline-item {
+
+  margin-bottom: 20px;
+
+}
+
+.timeline-dot {
+
+  width: 14px;
+  height: 14px;
+
+  background: var(--primary);
+
+  border-radius: 50%;
+
+  position: relative;
+  left: -28px;
+
+}

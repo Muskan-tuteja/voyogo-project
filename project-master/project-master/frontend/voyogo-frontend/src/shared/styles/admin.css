@@ -1,0 +1,906 @@
+/* =========================
+   GLOBAL FOUNDATION
+========================= */
+
+/* ENTERPRISE RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+
+/* =========================
+   ADMIN LAYOUT
+========================= */
+
+.admin-layout {
+
+  display: flex;
+  min-height: 100vh;
+  
+}
+
+/* =========================
+   PREMIUM SIDEBAR
+========================= */
+
+.admin-sidebar {
+
+  width: 270px;
+
+  background: rgba(15, 23, 42, 0.95);
+
+  backdrop-filter: blur(20px);
+
+  color: white;
+
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 4px 0 30px rgba(0,0,0,0.15);
+
+}
+
+.admin-logo {
+
+  font-size: 26px;
+  font-weight: 700;
+
+  margin-bottom: 40px;
+
+  text-align: center;
+
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+/* Nav */
+
+.admin-nav {
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+}
+
+.admin-nav a {
+
+  padding: 14px;
+
+  border-radius: 10px;
+
+  color: #cbd5e1;
+
+  text-decoration: none;
+
+  transition: all 0.25s ease;
+
+  font-weight: 500;
+
+}
+
+.admin-nav a:hover {
+
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+
+  color: white;
+
+  transform: translateX(4px);
+
+}
+
+.admin-active {
+
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+
+  color: white;
+
+  box-shadow: 0 6px 20px rgba(37,99,235,0.4);
+
+}
+
+/* Logout */
+
+.admin-logout {
+
+  margin-top: auto;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+
+  color: white;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  transition: all 0.25s ease;
+
+}
+
+.admin-logout:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(239,68,68,0.4);
+
+}
+
+/* =========================
+   CONTENT AREA
+========================= */
+
+.admin-content {
+
+  flex: 1;
+
+  padding: 40px;
+
+}
+
+.admin-title {
+
+  font-size: 30px;
+
+  font-weight: 700;
+
+  margin-bottom: 24px;
+
+  letter-spacing: -0.5px;
+
+}
+
+/* =========================
+   PREMIUM CARD
+========================= */
+
+.admin-content .card {
+
+  background: rgba(255,255,255,0.85);
+
+  backdrop-filter: blur(10px);
+
+  padding: 26px;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.08),
+    0 2px 6px rgba(0,0,0,0.05);
+
+  transition: all 0.3s ease;
+
+}
+
+.admin-content .card:hover {
+
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.12);
+
+}
+
+.admin-content .card h3 {
+
+  margin-bottom: 18px;
+
+  font-size: 20px;
+
+  font-weight: 600;
+
+}
+
+/* =========================
+   FORM
+========================= */
+
+.admin-content .card input,
+.admin-content .card select {
+
+  width: 100%;
+
+  padding: 15px;
+
+  margin-bottom: 14px;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+
+  background: #f8fafc;
+
+  transition: all 0.25s ease;
+
+}
+
+.admin-content .card input:focus,
+.admin-content .card select:focus {
+
+  border-color: #2563eb;
+
+  background: white;
+
+  box-shadow: 0 0 0 4px rgba(37,99,235,0.15);
+
+}
+
+/* =========================
+   PREMIUM BUTTON
+========================= */
+
+.btn-primary {
+
+  width: 100%;
+
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+
+  color: white;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  letter-spacing: 0.3px;
+
+  transition: all 0.25s ease;
+
+}
+
+.btn-primary:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 24px rgba(37,99,235,0.4);
+
+}
+
+/* =========================
+   TABLE PREMIUM
+========================= */
+
+.bus-table {
+
+  width: 100%;
+
+  border-collapse: collapse;
+
+  background: rgba(255,255,255,0.9);
+
+  backdrop-filter: blur(8px);
+
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+}
+
+.bus-table th {
+
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+
+  color: white;
+
+  padding: 16px;
+
+  font-weight: 600;
+
+}
+
+.bus-table td {
+
+  padding: 14px;
+
+  border-bottom: 1px solid #f1f5f9;
+
+}
+
+.bus-table tr {
+
+  transition: all 0.2s ease;
+
+}
+
+.bus-table tr:hover {
+
+  background: #f1f5f9;
+
+  transform: scale(1.01);
+
+}
+
+/* =========================
+   TRIP CARD PREMIUM
+========================= */
+
+.trip-card {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  background: rgba(255,255,255,0.9);
+
+  backdrop-filter: blur(10px);
+
+  padding: 24px;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.08);
+
+  transition: all 0.3s ease;
+
+}
+
+.trip-card:hover {
+
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.15);
+
+}
+
+/* Route */
+
+.trip-route {
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+}
+
+.trip-arrow {
+
+  margin: 0 10px;
+
+  color: #94a3b8;
+
+}
+
+/* Time */
+
+.trip-time {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 30px;
+
+}
+
+/* Price */
+
+.trip-price {
+
+  font-size: 22px;
+
+  font-weight: 700;
+
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.btn-edits {
+
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+
+  color: #fff;
+  
+  border: none;
+
+  padding: 8px 14px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+
+
+}
+
+.btn-edits:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 16px rgba(37,99,235,0.4);
+
+}
+
+.btn-delete {
+
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+
+  color: #fff;
+
+  border: none;
+
+  padding: 8px 14px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+}
+
+.btn-delete:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 16px rgba(239,68,68,0.4);
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .admin-sidebar {
+
+    width: 220px;
+
+  }
+
+  .admin-content {
+
+    padding: 24px;
+
+  }
+
+.trip-container {
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+}
+
+.trip-card {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: white;
+  padding: 20px;
+
+  border-radius: 12px;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+}
+
+/* Route */
+
+.trip-route {
+
+  font-size: 18px;
+  font-weight: bold;
+
+}
+
+.trip-city {
+
+  color: #0f172a;
+
+}
+
+.trip-arrow {
+
+  margin: 0 10px;
+  color: #64748b;
+
+}
+
+/* Bus name */
+
+.trip-bus {
+
+  font-size: 14px;
+  color: #64748b;
+
+}
+
+/* Time section */
+
+.trip-time {
+
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+}
+
+.trip-duration {
+
+  color: #64748b;
+  font-size: 14px;
+
+}
+
+.trip-date {
+
+  font-size: 12px;
+  color: #94a3b8;
+
+}
+
+/* Price */
+
+.trip-price {
+
+  font-size: 20px;
+  font-weight: bold;
+  color: #16a34a;
+
+}
+
+/* Actions */
+
+.trip-actions {
+
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+
+}
+
+.btn-edit {
+
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+
+}
+
+.btn-delete {
+
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+
+}
+
+
+}
+
+.trip-container {
+  padding: 20px;
+}
+
+.trip-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: white;
+  padding: 15px;
+  margin-bottom: 12px;
+
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.trip-left {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.trip-route {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.trip-bus {
+  color: gray;
+}
+
+.trip-time {
+  font-size: 14px;
+}
+
+.trip-duration {
+  margin-left: 10px;
+  color: #666;
+}
+
+.trip-right {
+  text-align: right;
+}
+
+.trip-fare {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.trip-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.btn-edit {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.btn-delete {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* POPUP */
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+}
+
+.popup-buttons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-save {
+  background: green;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+}
+
+.btn-cancel {
+  background: gray;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+}
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -400px;
+
+  width: 400px;
+  height: 100%;
+
+  background: white;
+
+  box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+
+  transition: right 0.3s ease;
+
+  z-index: 1000;
+}
+
+.drawer.open {
+  right: 0;
+}
+
+.drawer-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.drawer-content input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.drawer-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.drawer-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.3);
+
+  z-index: 999;
+}
+
+.btn-save {
+  background: green;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+}
+
+.btn-cancel {
+  background: gray;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+}
+
+.trip-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.trip-action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-edit {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-edit:hover {
+  background: #0056b3;
+}
+
+.btn-delete {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background: #a71d2a;
+}
+.btn-view {
+
+  background: #0ea5e9;
+  color: white;
+
+  border: none;
+  padding: 6px 12px;
+
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.seat-modal {
+
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 10px;
+
+  z-index: 1000;
+
+  width: 500px;
+}
+
+.seat-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 10px;
+
+  margin-top: 15px;
+}
+
+.seat-box {
+
+  padding: 10px;
+
+  border-radius: 6px;
+
+  text-align: center;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.seat-booked {
+
+  background-color: #22c55e;
+  color: white;
+}
+
+.seat-empty {
+
+  background-color: #e5e7eb;
+}
+
+.seat-modal-content h3 {
+
+  margin-bottom: 10px;
+}
